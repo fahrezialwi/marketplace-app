@@ -19,7 +19,7 @@ function Cart () {
   }
 
   const renderProduct = () => {
-    if (localCarts.length > 0) {
+    if (carts.length > 0) {
       return localCarts.map((el, index) => {
         return (
           <tr key={index}>
@@ -79,7 +79,7 @@ function Cart () {
               {renderProduct()}
             </tbody>
           </Table>
-          { localCarts.length === 0 && <Col md="12" className="text-center">No Data</Col> }
+          { carts.length === 0 && <Col md="12" className="text-center">No Data</Col> }
         </Row>
       </Container>
     </div>
